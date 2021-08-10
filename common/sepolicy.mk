@@ -23,3 +23,8 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/aosp/sepolicy/common/dynamic \
     device/aosp/sepolicy/common/vendor
 endif
+
+# Include atv rules on atv product
+ifeq ($(PRODUCT_IS_ATV), true)
+include device/aosp/sepolicy/atv/sepolicy.mk
+endif
